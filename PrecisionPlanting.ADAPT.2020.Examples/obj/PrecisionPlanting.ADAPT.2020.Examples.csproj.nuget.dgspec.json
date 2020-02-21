@@ -1,0 +1,127 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.Examples\\PrecisionPlanting.ADAPT.2020.Examples.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.Examples\\PrecisionPlanting.ADAPT.2020.Examples.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.Examples\\PrecisionPlanting.ADAPT.2020.Examples.csproj",
+        "projectName": "PrecisionPlanting.ADAPT.2020.Examples",
+        "projectPath": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.Examples\\PrecisionPlanting.ADAPT.2020.Examples.csproj",
+        "packagesPath": "C:\\Users\\ebandy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.Examples\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ebandy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.csproj": {
+                "projectPath": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AgGatewayADAPTFramework": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.csproj": {
+      "version": "2.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.csproj",
+        "projectName": "PrecisionPlanting.ADAPT.2020",
+        "projectPath": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020.csproj",
+        "packagesPath": "C:\\Users\\ebandy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ebandy\\PrecisionPlanting.ADAPT.2020\\PrecisionPlanting.ADAPT.2020\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ebandy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "AgGatewayADAPTFramework": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "protobuf-net": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
