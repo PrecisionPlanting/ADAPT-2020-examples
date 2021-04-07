@@ -100,15 +100,26 @@ namespace PrecisionPlanting.ADAPT._2020.Examples
                     {
                         //Product components are listed in the catalog as ingredients
                         int ingredientId = component.IngredientId;
-                        Ingredient ingredient = catalog.Ingredients.SingleOrDefault(i => i.Id.ReferenceId == ingredientId);
+                        if (component.IsProduct) //Product component.  I.e., something that is itself a product that may be applied on its own
+                        {
+                            Product componentProduct = catalog.Products.SingleOrDefault(i => i.Id.ReferenceId == ingredientId);
 
-                        //Component Quantities are reported as RepresentationValues
-                        //A Representation Value is a complex type that allows the value to 
-                        //be augmented with unit of measure and other data.
-                        double componentQuantity = component.Quantity.Value.Value;
-                        string quantityUOMCode = component.Quantity.Value.UnitOfMeasure.Code;
+                            //Component Quantities are reported as RepresentationValues
+                            //A Representation Value is a complex type that allows the value to 
+                            //be augmented with unit of measure and other data.
+                            double componentQuantity = component.Quantity?.Value?.Value ?? 0d;
+                            string quantityUOMCode = component.Quantity?.Value?.UnitOfMeasure?.Code ?? "count";
 
-                       Console.WriteLine($"{ingredient.Description}, at a rate of {componentQuantity} {quantityUOMCode}");
+                            Console.WriteLine($"{componentProduct.Description}, at a rate of {componentQuantity} {quantityUOMCode}");
+                        }
+                        else //Ingredient, in our case this is always a fertilizer nutrient
+                        {
+                            Ingredient ingredient = catalog.Ingredients.SingleOrDefault(i => i.Id.ReferenceId == ingredientId);
+                            double componentQuantity = component.Quantity?.Value?.Value ?? 0d;
+                            string quantityUOMCode = component.Quantity?.Value?.UnitOfMeasure?.Code ?? "count";
+
+                            Console.WriteLine($"{ingredient.Description}, at a rate of {componentQuantity} {quantityUOMCode}");
+                        }
                     }
                    Console.WriteLine();
                 }
